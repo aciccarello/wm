@@ -1,4 +1,4 @@
-# webmention.app
+# Fork of webmention.app
 
 ## Automate your outgoing webmentions
 
@@ -11,7 +11,7 @@ This repository also includes a stand alone command line tool that doesn't rely 
 The tool uses nodejs and once nodejs is installed, you can install the tool using:
 
 ```
-$ npm install @remy/webmention
+$ npm install @aciccarello/webmention
 ```
 
 This provides an executable under the command webmention (also available as wm). Default usage allows you to pass a filename (like a newly generated RSS feed) or a specific URL. It will default to the 10 most recent entries found (using item for RSS and `h-entry` for HTML).
@@ -44,5 +44,5 @@ Alternatively, you can make the tool part of your build workflow and have it exe
 ## Misc
 
 - Further documentation found on [webmention.app/docs](https://webmention.app/docs)
-- Built by [@rem](https://remysharp.com)
+- Forked from [@rem](https://remysharp.com)'s `@remy/webmention` package
 - MIT / [rem.mit-license.org](https://rem.mit-license.org/)

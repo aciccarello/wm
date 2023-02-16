@@ -1,9 +1,9 @@
 {
-  "name": "@remy/webmention",
+  "name": "@aciccarello/webmention",
   "version": "1.4.6",
   "description": "Web Mentions sender",
   "main": "./lib/webmention.js",
-  "repository": "github:remy/wm",
+  "repository": "github:aciccarello/wm",
   "bin": {
     "wm": "./bin/wm.js",
     "webmention": "./bin/wm.js"
@@ -28,6 +28,10 @@
     "indieweb"
   ],
   "author": "Remy Sharp (https://remysharp.com)",
+  "contributors": [
+    "Remy Sharp (https://remysharp.com)",
+    "Anthony Ciccarello (https://www.ciccarello.me)"
+  ],
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
