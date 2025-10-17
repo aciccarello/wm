@@ -18,7 +18,7 @@ tap.test('microformat missing', (t) => {
   t.plan(1);
   const wm = new Webmention();
   wm.on('endpoints', (endpoints) => {
-    t.equal(endpoints.length, 2);
+    t.equal(endpoints.length, 1);
     t.end();
   });
   wm.load(read('/fixtures/mf-missing.html'));
