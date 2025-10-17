@@ -35,7 +35,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.1.2",
     "clui": "^0.3.6",
     "decodeuricomponent": "^0.3.1",
     "follow-redirects": "^1.7.0",
@@ -60,7 +60,7 @@
     "markdown-it-task-lists": "^2.1.1",
     "passport": "^0.4.0",
     "passport-github2": "^0.1.11",
-    "tap": "^16.3.9"
+    "tap": "^21.1.1"
   },
   "bugs": {
     "url": "https://github.com/aciccarello/wm/issues"
