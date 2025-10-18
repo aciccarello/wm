@@ -1,5 +1,5 @@
 {
-  "name": "@remy/webmention",
+  "name": "@aciccarello/webmention",
   "version": "1.5.0",
   "description": "Web Mentions sender",
   "main": "./shared/lib/webmention.js",
