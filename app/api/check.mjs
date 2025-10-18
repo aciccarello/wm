@@ -1,6 +1,5 @@
 import '@remy/envy';
 import ms from 'ms';
-import { parse } from 'url';
 import Webmention from '../../shared/lib/webmention.js';
 import sendMention from '../../shared/lib/send/index.js';
 import db from '../../shared/lib/db.js';
@@ -29,7 +28,7 @@ async function handleRequest(req) {
   }
 
   // ensure the url is properly encoded
-  url = parse(url).href;
+  url = new URL(url).href;
 
   const { origin = '', referer = '' } = req.headers;
 

@@ -1,4 +1,3 @@
-const parse = require('url').parse;
 const hosts = require('./ignored-endpoints');
 const wm = require('./endpoint');
 
@@ -16,7 +15,7 @@ async function main(urls, progress = () => {}, limit = 10) {
   return Promise.all(
     urls
       .filter((source) => {
-        const hostname = parse(source).hostname;
+        const hostname = new URL(source).hostname;
         return !hosts.find((_) => {
           if (_.indexOf('.') === 0) {
             const test = hostname.endsWith(_) || hostname === _.slice(1);
