@@ -1,5 +1,4 @@
 const EventEmitter = require('events');
-const parse = require('url').parse;
 const links = require('./links').links;
 const getEndpoints = require('./get-wm-endpoints');
 const request = require('./request');
@@ -62,8 +61,9 @@ class Webmention extends EventEmitter {
 
     const ignoreOwn = (permalink) => (curr) => {
       if (!this.url) return true;
-      const host = parse(this.url).hostname;
-      if (curr.includes(host) || curr.includes(host + '/')) {
+      const host = new URL(this.url).hostname;
+      const currHost = new URL(curr).hostname;
+      if (host === currHost) {
         return false;
       }
 

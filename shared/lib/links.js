@@ -3,11 +3,10 @@ const dom = require('./html/dom');
 const smellsLikeRSS = require('./rss/is');
 const rss = require('./rss/dom');
 const resolve = require('url').resolve;
-const parse = require('url').parse;
 
 function links({ $, base, url = '' }) {
   let baseHref = $('base, link[rel~="canonical"]').attr('href') || url;
-  const hostname = parse(baseHref).hostname;
+  const hostname = new URL(baseHref).hostname;
 
   return base
     .map((i, element) => {
